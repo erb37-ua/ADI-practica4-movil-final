@@ -1,0 +1,22 @@
+.about-image{
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img{
+  width: min(260px, 100%);
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+ion-card-title{
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+ion-card-content p{
+    margin-bottom: 15px;
+    text-align: justify;
+    line-height: 1.4;
+}

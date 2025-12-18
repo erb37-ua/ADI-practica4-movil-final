@@ -1,0 +1,153 @@
+/* --- CONTENEDOR PRINCIPAL --- */
+.recipe-detail-container {
+    padding: 16px;
+    background: transparent;
+}
+
+.recipe-detail__title {
+    font-size: 1.8rem;
+    color: var(--dark);
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.recipe-detail__image {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* --- TEXTOS Y SECCIONES PLANAS --- */
+.recipe-detail__description {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #000000 !important;
+    background: transparent !important;
+    padding: 10px 0;
+    margin-bottom: 24px;
+}
+
+.section-title {
+    font-size: 1.3rem;
+    color: var(--dark);
+    border-bottom: 2px solid var(--accent);
+    display: inline-block;
+    margin: 24px 0 12px;
+    text-transform: uppercase;
+}
+
+.recipe-detail__list, 
+.recipe-detail__steps {
+    background: transparent !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* --- INGREDIENTES (RECUPERANDO COLORES) --- */
+.recipe-detail__list-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.recipe-detail__list-items li {
+    padding: 12px 0;
+    border-bottom: 1px dashed #ccc;
+    color: #000000 !important;
+    font-size: 1.1rem;
+}
+
+/* Esta es la clase que da color a los números de los ingredientes */
+.amount {
+    color: #d2694c; /* El color rojo/naranja de tu marca */
+    font-weight: bold;
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+.recipe-detail__subsection-title {
+    font-weight: bold;
+    color: var(--dark);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+/* --- PASOS --- */
+.step-item {
+    margin-bottom: 16px;
+    color: #000000 !important;
+    line-height: 1.6;
+}
+
+/* --- ESTRELLAS Y FORMULARIO --- */
+.stars-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.stars-row ion-icon {
+    font-size: 30px;
+    color: #000000;
+    cursor: pointer;
+}
+
+.stars-row .star-active {
+    color: #ffc107;
+}
+
+.custom-textarea-item {
+    --background: #f4f4f4;
+    --border-radius: 8px;
+    margin-top: 15px;
+    border: 1px solid #ddd;
+}
+
+ion-textarea {
+    --color: #000000 !important;
+}
+
+.btn-enviar-comentario {
+    --background: #d2694c !important;
+    --color: white;
+    width: 50%;
+    margin: 20px auto !important;
+    display: block;
+    --border-radius: 20px;
+    font-weight: bold;
+}
+
+/* --- TARJETAS COMENTARIOS (CORREGIDO) --- */
+.recipe-comments__item {
+    background: #ffffff !important;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+    color: #000000 !important; /* Fuerza el color de la tarjeta */
+}
+
+.recipe-comments__author {
+    font-weight: bold;
+    color: #000000 !important; /* Nombre del autor en negro */
+    margin-bottom: 4px;
+}
+
+.recipe-comments__meta {
+    font-size: 0.8rem;
+    color: #666666 !important; /* Fecha en gris oscuro para que sea legible */
+}
+
+.comment-text {
+    color: #000000 !important; /* Texto del comentario en negro */
+    line-height: 1.4;
+}
+
+.recipe-comments__stars {
+    color: #ffc107 !important; /* Asegura el amarillo de las estrellas fijas */
+    margin: 4px 0;
+}

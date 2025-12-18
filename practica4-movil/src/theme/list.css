@@ -1,0 +1,138 @@
+.list-container {
+    padding: 16px;
+    margin-top: 20px;
+}
+
+.list-header-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+/* === TEXTOS DE CONTROL === */
+.filter-item {
+    --background: transparent;
+    --color: #000000 !important;
+    font-family: 'Itim', sans-serif;
+}
+
+.filter-select-item {
+    --padding-start: 10px;
+    --inner-padding-end: 10px;
+    --background: #ffffff !important;
+    --color: #000000 !important;
+    width: 130px;
+    flex-shrink: 0;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    height: 44px;
+}
+
+.filter-select-item ion-select {
+    --placeholder-color: #000000;
+    --color: #000000;
+    width: 100%;
+}
+
+ion-label, .info-text p {
+    color: #000000 !important;
+}
+
+.info-text p {
+    color: #000000 !important;
+}
+
+/* === BUSCADOR === */
+.list-search-bar {
+    padding: 0;
+    flex-grow: 1;
+    --background: #ffffff !important;
+    --color: #000000;
+    --placeholder-color: #666;
+    --border-radius: 12px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+}
+
+/* === BOTÓN AÑADIR === */
+.btn-add-short {
+    --background: #d2694c !important; /* Rojo del header */
+    --color: #ffffff;
+    width: 60%; /* Más corto */
+    margin: 10px auto !important;
+    display: block;
+    --border-radius: 20px;
+    font-weight: bold;
+    font-family: 'Itim', sans-serif;
+}
+
+/* === TARJETAS === */
+.custom-list {
+    background: transparent;
+}
+
+.recipe-admin-card {
+    --inner-border-width: 0;
+    --background: #ffffff !important;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.recipe-admin-card::part(native) {
+    border: none !important; /* Asegura que no haya bordes negros */
+}
+
+.recipe-admin-title {
+    color: #000000 !important;
+    font-weight: bold;
+    font-family: 'Itim', sans-serif;
+}
+
+.recipe-admin-thumb {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* === PAGINACIÓN === */
+.pagination-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.page-number {
+    color: #3880ff;
+    font-weight: bold;
+}
+
+/* Botón redondo */
+.fab-add ion-fab-button {
+    --background: #d2694c;
+    --color: #ffffff;
+}
+
+/* === PAGINACIÓN AZUL === */
+.pagination-icon {
+    color: #3880ff !important; 
+    font-size: 28px;
+}
+
+.popover-viewport {
+    --background: #d2694c !important;
+}
+
+ion-select-popover ion-item {
+    --background: #d2694c !important;
+    --color: #000000 !important;
+    --border-color: rgba(0,0,0,0.1);
+}
+
+/* Efecto al seleccionar dentro del pop-over */
+ion-select-popover ion-radio::part(container) {
+    --color-checked: #ffffff;
+}

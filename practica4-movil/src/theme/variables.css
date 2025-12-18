@@ -1,0 +1,55 @@
+:root{
+    --accent:#c65a48;
+    --dark:#2b5b5b;
+    --bg:#fbf8f6;
+    --card:#fff;
+    --radius:14px;
+
+    --app-font: 'Itim', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+
+    /* CLAVE: esto es lo que Ionic usa */
+    --ion-font-family: var(--app-font);
+}
+
+/* Fondo general de la app */
+ion-content{
+    --background: var(--bg);
+    --padding-top: 32px;
+}
+
+/* Toolbar */
+ion-toolbar{
+    --background: #D2694C;
+    --color: #000000;
+}
+
+/* Tarjetas */
+ion-card{
+    --background: var(--card);
+    border-radius: var(--radius);
+    --color: #000;
+}
+
+/* No hace falta listar ion-title, ion-label... */
+html, body, ion-app{
+    font-family: var(--app-font);
+}
+
+ion-card-title{
+    color: #000;
+}
+/* Listas: que no pinten fondo oscuro por defecto */
+ion-list{
+  --background: transparent;
+}
+
+ion-item{
+  --background: transparent;
+  --ion-item-background: transparent;
+}
+
+/* A veces el fondo lo pinta el "native" */
+ion-item::part(native){
+  background: transparent;
+}
+
