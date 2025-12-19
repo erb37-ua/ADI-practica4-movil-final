@@ -11,6 +11,7 @@ import LegalPage from '@/views/legal/LegalPage.vue';
 import LoginPage from '@/views/LoginPage.vue';
 import RegisterPage from '@/views/RegisterPage.vue';
 import CommentsPage from '@/views/CommentsPage.vue';
+import ProfilePage from '@/views/ProfilePage.vue';
 
 
 const routes: Array<RouteRecordRaw> = [
@@ -62,6 +63,10 @@ const routes: Array<RouteRecordRaw> = [
     path: '/comments',
     name: 'comments',
     component: CommentsPage
+  },{
+    path: '/profile',
+    name: 'profile',
+    component: ProfilePage
   }
 ]
 

@@ -294,7 +294,7 @@ export const useMainStore = defineStore('main', {
                     email: this.user.email,
                 },
             })
-
+            await this.loadMyComments()
             return created
         },
     },

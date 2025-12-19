@@ -87,12 +87,12 @@ const handleDelete = async (id) => {
     const alert = await alertController.create({
         header: '¿Eliminar comentario?',
         message: 'Esta acción no se puede deshacer.',
-        cssClass: 'custom-alert', // CLAVE: Clase para el CSS
+        cssClass: 'custom-alert', 
         buttons: [
             { 
                 text: 'CANCELAR', 
                 role: 'cancel',
-                cssClass: 'alert-button-cancel' // Clase específica para este botón
+                cssClass: 'alert-button-cancel'
             },
             { 
                 text: 'ELIMINAR', 
@@ -137,10 +137,10 @@ const formatDate = (iso) => {
               <p>Cargando tus comentarios...</p>
             </div>
 
-            <div v-else-if="!hasComments" class="ion-text-center ion-padding">
-              <ion-icon :icon="chatbubbleOutline" size="large" color="medium"></ion-icon>
-              <p>Aún no has dejado ningún comentario.</p>
-              <ion-button fill="clear" router-link="/home" class="legal-link-btn">
+            <div v-else-if="!hasComments" class="empty-state-container">
+              <ion-icon :icon="chatbubbleOutline" class="empty-state-icon"></ion-icon>
+              <p class="ion-text-center empty-state-text">Aún no has dejado ningún comentario.</p>
+              <ion-button fill="clear" router-link="/home" class="legal-link-btn ion-text-center">
                 Ve a una receta y deja el primero 😊
               </ion-button>
             </div>
@@ -226,6 +226,26 @@ const formatDate = (iso) => {
 </template>
 
 <style scoped>
+.empty-state-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/*Icono */
+.empty-state-icon {
+  font-size: 60px; /* Tamaño */
+  margin-bottom: 24px; /* Separacion */
+  color: var(--dark);
+}
+
+.empty-state-text {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
 .main-container {
   max-width: 800px;
   margin: 0 auto;
@@ -237,7 +257,6 @@ const formatDate = (iso) => {
   margin-bottom: 16px;
   padding: 12px;
   background: #fff;
-  /* Añadimos una sombra sutil para que los items resalten sobre el fondo beige */
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
@@ -271,7 +290,7 @@ ion-thumbnail {
 }
 
 .comment-body {
-  padding-left: 62px; /* Alineado con el texto bajo el thumbnail */
+  padding-left: 62px; 
 }
 
 .comment-text {
@@ -326,13 +345,13 @@ ion-thumbnail {
 .page-info {
   font-family: 'Itim', sans-serif;
   font-weight: bold;
-  color: var(--dark);
+  color: #3880ff;
 }
 
 .legal-link-btn {
   --color: #d2694c;
   font-weight: bold;
+  margin: 0 auto;
+  display: block;
 }
-
-
 </style>
