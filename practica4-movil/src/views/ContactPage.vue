@@ -1,10 +1,3 @@
-<script setup lang="ts">
-  import { 
-    IonPage, IonHeader, IonToolbar, IonTitle, IonContent, 
-    IonButtons, IonBackButton, IonCard, IonCardHeader,
-    IonCardTitle,IonCardContent,IonFooter 
-  } from '@ionic/vue';
-</script>
 <template>
   <ion-page>
     <ion-header>
@@ -67,50 +60,21 @@
   </ion-page>
 </template>
 
+<script setup lang="ts">
+import { 
+  IonPage, 
+  IonHeader, 
+  IonToolbar, 
+  IonTitle, 
+  IonContent, 
+  IonButtons, 
+  IonBackButton, 
+  IonCard, 
+  IonCardHeader,
+  IonCardTitle,
+  IonCardContent,
+  IonFooter 
+} from '@ionic/vue';
 
-
-<style scoped>
-.main-container {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-ion-card-content p {
-  margin-bottom: 15px;
-  text-align: justify;
-  line-height: 1.4;
-}
-
-.contact__email-link {
-  text-decoration: none;
-  color: #00b388; 
-  transition: opacity 0.2s;
-}
-
-.contact__email-link:hover {
-  opacity: 0.7;
-}
-
-.contact__socials {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 30px;
-}
-
-.contact__social-link {
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  text-decoration: none;
-  touch-action: manipulation;
-}
-
-.contact__icon {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-}
-</style>
+import '../theme/contact.css';
+</script>

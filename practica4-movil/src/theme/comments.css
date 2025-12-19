@@ -1,0 +1,126 @@
+.empty-state-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.empty-state-icon {
+    font-size: 60px !important;
+    margin-bottom: 24px !important;
+    color: var(--dark) !important;
+}
+
+.empty-state-text {
+    font-size: 1.1rem !important;
+    margin-bottom: 8px !important;
+    color: #000 !important;
+}
+
+.main-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.comment-item {
+    border: 1px solid rgba(0,0,0,0.1) !important;
+    border-radius: 12px !important;
+    margin-bottom: 16px !important;
+    padding: 12px !important;
+    background: #fff !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
+}
+
+.recipe-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+ion-thumbnail {
+    --size: 50px !important;
+    --border-radius: 8px !important;
+}
+
+.recipe-meta {
+    display: flex;
+    flex-direction: column;
+}
+
+.recipe-link {
+    font-weight: bold !important;
+    color: var(--dark) !important;
+    text-decoration: none !important;
+    font-size: 1rem !important;
+}
+
+.date-text {
+    font-size: 0.75rem !important;
+    color: #666 !important;
+}
+
+.comment-body {
+    padding-left: 62px; 
+}
+
+.comment-text {
+    font-style: italic !important;
+    margin: 0 0 8px 0 !important;
+    color: #444 !important;
+}
+
+.rating-display ion-icon {
+    font-size: 14px !important;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -10px;
+}
+
+.edit-mode {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.custom-textarea {
+    --background: #f9f9f9 !important;
+    --padding-start: 10px !important;
+    --padding-end: 10px !important;
+    --border-radius: 8px !important;
+    border: 1px solid #ddd !important;
+}
+
+.rating-selector {
+    display: flex;
+    justify-content: center;
+}
+
+.edit-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.pagination-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-info {
+    font-family: 'Itim', sans-serif !important;
+    font-weight: bold !important;
+    color: #3880ff !important;
+}
+
+.legal-link-btn {
+    --color: #d2694c !important;
+    font-weight: bold !important;
+    margin: 0 auto !important;
+    display: block !important;
+}

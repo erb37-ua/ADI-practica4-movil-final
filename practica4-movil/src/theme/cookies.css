@@ -1,0 +1,48 @@
+.cookies-list {
+    margin: 6px 0 12px 0;
+}
+
+.cookies-p {
+    font-size: 15px !important;
+    line-height: 1.5;
+    color: #000 !important;
+    margin-bottom: 12px;
+    text-align: justify;
+}
+
+.cookies-item ion-label.cookies-li {
+    font-size: 15px !important; 
+    line-height: 1.5;
+    color: #000 !important;
+    margin: 0;
+    white-space: normal;
+    padding-left: 20px;
+    position: relative;
+    font-weight: normal !important; 
+}
+
+.cookies-li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 18px; 
+    color: #000 !important;
+}
+
+ion-list.cookies-list,
+ion-list.cookies-list::part(native) {
+    background: transparent !important;
+    padding: 0 !important;
+}
+
+ion-item.cookies-item,
+ion-item.cookies-item::part(native) {
+    --background: transparent !important;
+    --ion-item-background: transparent !important;
+    background: transparent !important;
+    --inner-border-width: 0px;
+    --border-width: 0px;
+    --padding-start: 0px;
+    --inner-padding-end: 0px;
+}

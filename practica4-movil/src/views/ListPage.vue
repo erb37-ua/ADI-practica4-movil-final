@@ -99,6 +99,8 @@ onMounted(() => {
   store.loadRecipes()
 })
 
+
+
 const filteredRecipes = computed(() => {
   let recipes = store.recipes
   if (filterCategory.value) {

@@ -1,0 +1,136 @@
+.login-center-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+}
+
+.login-card {
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.login-card__title {
+    font-size: 28px !important;
+    margin-bottom: 24px;
+    font-weight: bold !important;
+    text-align: center;
+    color: #000 !important;
+    font-family: 'Itim', sans-serif !important;
+}
+
+.input-group {
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+.login-card__label {
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #333 !important;
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    border: 1px solid #2b5b5b !important;
+    border-radius: 10px;
+    padding: 0 12px;
+    background: #fff !important;
+    transition: all 0.2s ease;
+}
+
+.input-field:focus-within {
+    border: 2px solid #000 !important;
+}
+
+.input-icon {
+    font-size: 18px;
+    color: #666 !important;
+    margin-right: 10px;
+}
+
+.input-field:focus-within .input-icon {
+    color: #000 !important;
+}
+
+.login-card__input {
+    --padding-start: 0;
+    font-family: 'Itim', sans-serif !important;
+    color: #000 !important;
+    caret-color: #000 !important;
+}
+
+.login-card__input::part(native) {
+    caret-color: #000 !important;
+}
+
+.input-group--error .input-field {
+    border-color: #e63946 !important;
+    box-shadow: 0 0 0 2px rgba(230, 57, 70, 0.15);
+}
+
+.login-card__error {
+    color: #e63946 !important;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.login-card__button {
+    --background: var(--dark) !important;
+    --color: #fff !important;
+    --border-radius: 12px;
+    margin-top: 10px;
+    height: 44px;
+    font-family: 'Itim', sans-serif !important;
+}
+
+.signup-terms {
+    font-size: 11px;
+    color: #666 !important;
+    text-align: center;
+    margin-top: 14px;
+}
+
+.terms-link {
+    color: #666 !important;
+    text-decoration: underline;
+}
+
+.register-link-container {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-card__link {
+    font-size: 14px;
+    text-decoration: underline;
+    font-weight: bold;
+    color: #2b5b5b !important;
+}
+
+/* === ANIMACIONES === */
+@keyframes login-shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-6px); }
+    40% { transform: translateX(6px); }
+    60% { transform: translateX(-4px); }
+    80% { transform: translateX(4px); }
+    100% { transform: translateX(0); }
+}
+
+.login-card--shake {
+    animation: login-shake 0.3s;
+}
+
+.fade-slide-enter-active, .fade-slide-leave-active {
+    transition: opacity 0.22s, transform 0.22s;
+}
+
+.fade-slide-enter-from, .fade-slide-leave-to {
+    opacity: 0;
+    transform: translateY(-6px);
+}
