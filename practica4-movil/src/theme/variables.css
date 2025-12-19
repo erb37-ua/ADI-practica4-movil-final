@@ -65,4 +65,43 @@ ion-item::part(native){
 }
 
 
+/* Contenedor del Popup */
+.custom-alert {
+    --background: #fbf8f6; 
+    --backdrop-opacity: 0.6;
+}
 
+
+.custom-alert .alert-title {
+    font-family: 'Itim', sans-serif !important;
+    color: #2b5b5b !important;
+    font-size: 22px !important;
+    font-weight: bold !important;
+}
+
+
+.custom-alert .alert-message {
+    font-family: 'Itim', sans-serif !important;
+    color: #444 !important;
+    font-size: 16px !important;
+}
+
+
+.custom-alert .alert-button-inner {
+    font-family: 'Itim', sans-serif !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+}
+
+
+.custom-alert .alert-button-role-destructive .alert-button-inner {
+    color: #e63946 !important;
+}
+
+.custom-alert .alert-button-role-cancel .alert-button-inner {
+    color: #2b5b5b !important;
+}
+
+.custom-alert .alert-button-group {
+    padding: 8px !important;
+}
