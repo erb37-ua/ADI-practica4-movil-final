@@ -42,7 +42,6 @@ Privada (Usuario): En la sección Mis Comentarios (/comments), accesible desde e
 Administrativa (Admin): En la página de Gestión de Comentarios (/listcomments), el administrador puede visualizar la totalidad de los comentarios de la plataforma, incluyendo el autor, la receta, la fecha y la valoración.
 
 ### 3. Actualización (Update / Editar)
-Nota Importante: La funcionalidad de edición no está disponible en la página de administración general.
 
 Lógica: Se ha decidido que el administrador no debe modificar las palabras de los usuarios para preservar la integridad de las opiniones.
 
