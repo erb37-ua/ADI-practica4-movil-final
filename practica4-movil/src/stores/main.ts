@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import { pb } from '../services/pb'
 import { 
     listarRecetas, eliminarReceta as eliminarRecetaService,
     createReceta as createRecetaService,
@@ -49,6 +50,11 @@ export const useMainStore = defineStore('main', {
         recipeComments: [] as any[],
         recipeCommentsLoading: false,
         recipeCommentsError: null as string | null,
+
+        // ==== COMENTARIOS ADMINISTRACIÓN ====
+        allComments: [] as any[],
+        allCommentsLoading: false,
+        allCommentsError: null as string | null,
     }),
 
     getters: {
@@ -297,5 +303,48 @@ export const useMainStore = defineStore('main', {
             await this.loadMyComments()
             return created
         },
+
+        async loadAllComments() {
+            this.allCommentsLoading = true;
+            this.allCommentsError = null;
+            try {
+                const records = await pb.collection('comentarios').getFullList({
+                    sort: '-created',
+                    expand: 'usuario,receta'
+                });
+
+                this.allComments = records.map(r => ({
+                    id: r.id,
+                    // Mapeamos los nombres de PocketBase a los nombres de tu componente
+                    texto: r.comentario ?? '', 
+                    rating: r.valoracion ?? 0,
+                    created: r.created,
+                    // Extraemos el nombre del usuario directamente para facilitar el uso
+                    usuarioNombre: r.expand?.usuario?.username || r.expand?.usuario?.name || 'Usuario',
+                    receta: {
+                        id: r.receta,
+                        titulo: r.expand?.receta?.titulo || 'Receta eliminada',
+                        imagenUrl: r.expand?.receta?.imagen 
+                            ? pb.files.getURL(r.expand.receta, r.expand.receta.imagen) 
+                            : null
+                    }
+                }));
+            } catch (err: any) {
+                this.allCommentsError = err.message || 'Error cargando comentarios';
+                console.error(err);
+            } finally {
+                this.allCommentsLoading = false;
+            }
+        },
+
+        async deleteAnyComment(id: string) {
+            try {
+                await pb.collection('comentarios').delete(id);
+                this.allComments = this.allComments.filter(c => c.id !== id);
+            } catch (err) {
+                console.error("Error al borrar comentario:", err);
+                throw err;
+            }
+        }
     },
 })

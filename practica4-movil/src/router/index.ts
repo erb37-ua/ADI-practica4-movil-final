@@ -13,6 +13,7 @@ import RegisterPage from '@/views/RegisterPage.vue';
 import CommentsPage from '@/views/CommentsPage.vue';
 import ProfilePage from '@/views/ProfilePage.vue';
 import CreateEditPage from '../views/CreateEditPage.vue';
+import ListCommentsPage from '@/views/ListCommentsPage.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -71,6 +72,10 @@ const routes: Array<RouteRecordRaw> = [
     path: '/create-edit/:id?',
     name: 'CreateEdit',
     component: CreateEditPage
+  },{
+    path: '/listcomments',
+    name: 'ListComments',
+    component: ListCommentsPage
   }
 ]
 
