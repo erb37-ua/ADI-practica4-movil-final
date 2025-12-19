@@ -1,0 +1,113 @@
+.profile-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px 10px;
+    background-color: var(--bg) !important;
+    min-height: 100%;
+}
+
+.main-title {
+    font-family: var(--app-font) !important;
+    font-size: 32px !important;
+    font-weight: bold !important;
+    color: #000 !important;
+    text-align: center;
+}
+
+.field-container { margin-bottom: 18px; }
+
+.custom-label {
+    display: block;
+    font-weight: bold;
+    color: #333 !important;
+    margin-bottom: 6px;
+    font-size: 16px;
+}
+
+.custom-input-box {
+    display: flex;
+    align-items: center;
+    border: 1.5px solid var(--dark) !important;
+    border-radius: 14px;
+    padding: 2px 14px;
+    background: #fff !important;
+    height: 48px;
+}
+
+.input-icon { 
+    font-size: 20px; 
+    color: #666 !important; 
+    margin-right: 12px; 
+}
+
+.inner-input {
+    --padding-start: 0;
+    font-family: var(--app-font) !important;
+    font-size: 16px;
+    color: #000 !important;
+}
+
+.disabled { 
+    background-color: #fcfcfc !important; 
+    opacity: 0.8 !important; 
+}
+
+.action-buttons { 
+    display: flex; 
+    gap: 12px; 
+    margin-top: 20px; 
+}
+
+.btn-dark {
+    flex: 1;
+    --background: var(--dark) !important;
+    --border-radius: 12px;
+    --color: #fff !important;
+    font-weight: bold;
+    height: 50px;
+    text-transform: none;
+}
+
+.delete-container { 
+    display: flex; 
+    justify-content: center; 
+    margin-top: 15px; 
+}
+
+.btn-danger {
+    --background: var(--accent) !important;
+    --border-radius: 14px;
+    --color: #fff !important;
+    width: 65%;
+    height: 45px;
+    text-transform: none;
+    font-weight: bold;
+}
+
+.error-border .custom-input-box {
+    border-color: #e63946 !important;
+    box-shadow: 0 0 0 2px rgba(230, 57, 70, 0.15) !important;
+}
+
+.error-msg { color: #e63946 !important; text-align: center; font-size: 14px; margin: 8px 0; }
+.info-msg { color: #2b9348 !important; text-align: center; font-size: 14px; margin: 8px 0; }
+
+.fade-slide-enter-active, .fade-slide-leave-active {
+    transition: opacity 0.22s, transform 0.22s;
+}
+.fade-slide-enter-from, .fade-slide-leave-to {
+    opacity: 0; transform: translateY(-6px);
+}
+
+@keyframes profile-shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-6px); }
+    40% { transform: translateX(6px); }
+    60% { transform: translateX(-4px); }
+    80% { transform: translateX(4px); }
+    100% { transform: translateX(0); }
+}
+
+.profile-card--shake {
+    animation: profile-shake 0.3s;
+}
