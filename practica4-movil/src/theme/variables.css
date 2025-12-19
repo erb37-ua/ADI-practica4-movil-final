@@ -100,8 +100,8 @@ body, html, ion-app, ion-content, ion-page {
 }
 
 @media (prefers-color-scheme: dark) {
-  body {
-    --ion-background-color: #fbf8f6 !important;
-    --ion-text-color: #000000 !important;
-  }
+    body {
+        --ion-background-color: #fbf8f6 !important;
+        --ion-text-color: #000000 !important;
+    }
 }

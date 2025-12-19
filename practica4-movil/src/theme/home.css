@@ -8,7 +8,6 @@
     color: #666;
 }
 
-/* Grid adaptado para móviles: 1 receta por fila */
 .recetas-grid {
     display: grid;
     grid-template-columns: 1fr; 
@@ -18,14 +17,12 @@
     margin: 0 auto;
 }
 
-/* Formato Tablet: 2 recetas por fila */
 @media (min-width: 768px) {
     .recetas-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Formato Portátil/PC: 3 recetas por fila */
 @media (min-width: 1024px) {
     .recetas-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -86,6 +83,23 @@
     color: #e63946;
 }
 
-.fab-button {
-    margin-bottom: 20px;
+.fab-button{
+    bottom: 120px !important;  
+    right: 15px !important;
+    z-index: 10;
 }
+
+.fab-button ion-fab-button{
+    --background: #d2694c;
+    --color: #ffffff;
+}
+
+.fab-button ion-fab-button::part(native){
+    box-shadow: 0 3px 10px rgba(0,0,0,0.18);
+}
+
+.btn-ver-todas{
+    --color: #d2694c;
+    font-weight: 700;
+}
+

@@ -86,13 +86,9 @@
     margin: 0 10px;
 }
 
-/* Botón flotante */
-
 .fab-add {
-    /* Ajustamos el margen inferior para que "flote" sobre el footer */
     margin-bottom: 85px !important; 
     margin-right: 15px;
-    /* Aseguramos que siempre esté por encima visualmente */
     z-index: 10;
 }
 
