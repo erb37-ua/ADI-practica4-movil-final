@@ -14,7 +14,9 @@
 
       <div v-else-if="recetasFiltradas.length === 0" class="message-container">
         <p class="message-text">No se encontraron recetas 😢</p>
-        <ion-button fill="clear" @click="limpiarFiltros">Ver todas</ion-button>
+        <ion-button class="btn-ver-todas" fill="clear" @click="limpiarFiltros">
+          Ver todas
+        </ion-button>
       </div>
 
       <div v-else class="recetas-grid">
@@ -44,7 +46,7 @@
       </div>
 
       <ion-fab v-if="store.isAdmin" slot="fixed" vertical="bottom" horizontal="end" class="fab-button">
-        <ion-fab-button color="danger" @click="router.push('/create-edit')">
+        <ion-fab-button @click="router.push('/create-edit')">
           <ion-icon :icon="add"></ion-icon>
         </ion-fab-button>
       </ion-fab>

@@ -10,7 +10,9 @@ import PrivacidadPage from '@/views/legal/PrivacidadPage.vue';
 import LegalPage from '@/views/legal/LegalPage.vue';
 import LoginPage from '@/views/LoginPage.vue';
 import RegisterPage from '@/views/RegisterPage.vue';
+// @ts-ignore
 import CommentsPage from '@/views/CommentsPage.vue';
+// @ts-ignore
 import ProfilePage from '@/views/ProfilePage.vue';
 import CreateEditPage from '../views/CreateEditPage.vue';
 import ListCommentsPage from '@/views/ListCommentsPage.vue';

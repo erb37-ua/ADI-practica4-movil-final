@@ -86,7 +86,7 @@ import { useMainStore } from '@/stores/main'
 import { 
   IonPage, IonContent, IonHeader, IonToolbar, IonTitle, 
   IonButtons, IonBackButton, IonCard, IonCardContent, 
-  IonInput, IonButton, IonLabel, IonIcon, IonFooter 
+  IonInput, IonButton, IonLabel, IonIcon
 } from '@ionic/vue'
 import { mailOutline, lockClosedOutline, logInOutline } from 'ionicons/icons'
 
@@ -101,7 +101,6 @@ const password = ref('')
 const errorMsg = ref('')
 const cargando = computed(() => store.authLoading)
 
-// Estado visual para errores y animación
 const shakeLogin = ref(false)
 const emailError = ref(false)
 const passwordError = ref(false)

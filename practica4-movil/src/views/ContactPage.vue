@@ -27,8 +27,8 @@
             <p>
               📧
               <a class="contact__email-link"
-                 href="https://mail.google.com/mail/?view=cm&fs=1&to=erb37@gcloud.ua.es"
-                 target="_blank" rel="noopener noreferrer">
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=erb37@gcloud.ua.es"
+                target="_blank" rel="noopener noreferrer">
                 erb37@gcloud.ua.es
               </a>
             </p>
@@ -57,12 +57,6 @@
         </ion-card>
       </div>
     </ion-content>
-
-    <ion-footer>
-      <ion-toolbar>
-        <ion-title size="small">© 2025 Recetarizada</ion-title>
-      </ion-toolbar>
-    </ion-footer>
   </ion-page>
 </template>
 

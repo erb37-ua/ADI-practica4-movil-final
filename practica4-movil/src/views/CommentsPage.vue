@@ -100,12 +100,6 @@
         </ion-card>
       </div>
     </ion-content>
-
-    <ion-footer>
-      <ion-toolbar>
-        <ion-title size="small" class="ion-text-center">© 2025 Recetarizada</ion-title>
-      </ion-toolbar>
-    </ion-footer>
   </ion-page>
 </template>
 

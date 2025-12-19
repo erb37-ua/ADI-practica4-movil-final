@@ -30,6 +30,7 @@ ion-card.green-card {
 ion-content{
     --background: var(--bg);
     --padding-top: 32px;
+    --padding-bottom: 80px !important;
 }
 
 ion-toolbar{
@@ -46,16 +47,16 @@ ion-card-title{
 }
 
 ion-list{
-  --background: transparent;
+    --background: transparent;
 }
 
 ion-item{
-  --background: transparent;
-  --ion-item-background: transparent;
+    --background: transparent;
+    --ion-item-background: transparent;
 }
 
 ion-item::part(native){
-  background: transparent;
+    background: transparent;
 }
 
 .custom-alert {
@@ -99,8 +100,8 @@ body, html, ion-app, ion-content, ion-page {
 }
 
 @media (prefers-color-scheme: dark) {
-  body {
-    --ion-background-color: #fbf8f6 !important;
-    --ion-text-color: #000000 !important;
-  }
+    body {
+        --ion-background-color: #fbf8f6 !important;
+        --ion-text-color: #000000 !important;
+    }
 }

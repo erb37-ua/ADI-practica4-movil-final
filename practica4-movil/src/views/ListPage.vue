@@ -68,7 +68,6 @@
           <ion-icon :icon="addOutline"></ion-icon>
         </ion-fab-button>
       </ion-fab>
-
     </ion-content>
   </ion-page>
 </template>
@@ -99,6 +98,8 @@ const pageSize = 6
 onMounted(() => {
   store.loadRecipes()
 })
+
+
 
 const filteredRecipes = computed(() => {
   let recipes = store.recipes
