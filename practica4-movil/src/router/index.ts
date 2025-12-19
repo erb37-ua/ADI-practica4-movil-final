@@ -8,6 +8,7 @@ import ListPage from '../views/ListPage.vue';
 import ContactPage from '@/views/ContactPage.vue';
 import PrivacidadPage from '@/views/legal/PrivacidadPage.vue';
 import LegalPage from '@/views/legal/LegalPage.vue';
+import LoginPage from '@/views/LoginPage.vue';
 
 
 const routes: Array<RouteRecordRaw> = [
@@ -47,6 +48,10 @@ const routes: Array<RouteRecordRaw> = [
     path: '/legal',
     name: 'legal',
     component: LegalPage
+  },{
+    path: '/login',
+    name: 'login',
+    component: LoginPage
   }
 ]
 

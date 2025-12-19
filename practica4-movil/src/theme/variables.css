@@ -10,15 +10,6 @@
     /* CLAVE: esto es lo que Ionic usa */
     --ion-font-family: var(--app-font);
 }
-/* src/theme/variables.css */
-
-ion-card {
-    --background: transparent !important; /* Quita el fondo blanco */
-    --box-shadow: none !important;       /* Quita la sombra del recuadro */
-    box-shadow: none !important;
-    border: none !important;             /* Quita bordes si los hubiera */
-    margin: 0; 
-}
 
 /* Fondo general de la app */
 ion-content{
