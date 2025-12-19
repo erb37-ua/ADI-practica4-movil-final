@@ -54,16 +54,8 @@
 
 <script setup lang="ts">
 import { 
-    IonPage, 
-    IonHeader, 
-    IonToolbar, 
-    IonTitle, 
-    IonContent, 
-    IonButtons, 
-    IonBackButton, 
-    IonCard, 
-    IonCardContent,
-    IonButton 
+    IonPage, IonHeader, IonToolbar, IonTitle, IonContent, 
+    IonButtons, IonBackButton, IonCard, IonCardContent,IonButton 
 } from '@ionic/vue';
 </script>
 

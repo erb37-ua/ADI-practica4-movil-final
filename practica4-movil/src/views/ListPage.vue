@@ -68,7 +68,6 @@
           <ion-icon :icon="addOutline"></ion-icon>
         </ion-fab-button>
       </ion-fab>
-
     </ion-content>
   </ion-page>
 </template>
@@ -80,7 +79,7 @@ import { useMainStore } from '@/stores/main'
 import { 
   IonPage, IonContent, IonList, IonItem, IonLabel, IonThumbnail, 
   IonButton, IonIcon, IonButtons, IonSearchbar, IonSelect, 
-  IonSelectOption, IonSpinner 
+  IonSelectOption
 } from '@ionic/vue'
 import { 
   createOutline, trashOutline, chevronBackOutline, 

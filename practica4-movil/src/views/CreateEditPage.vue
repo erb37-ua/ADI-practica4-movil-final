@@ -177,7 +177,6 @@ onMounted(async () => {
   }
 })
 
-// Lógica de manipulación de arrays (Ingredientes/Pasos)
 const addIngredientSection = () => ingredientes.value.push({ section: '', items: [{ amount: '', name: '' }] })
 const removeIngredientSection = (i: number) => ingredientes.value.splice(i, 1)
 const addIngredientItem = (si: number) => ingredientes.value[si].items.push({ amount: '', name: '' })
@@ -207,7 +206,6 @@ const removeCategoria = (cat: string) => {
 }
 
 const handleSubmit = async () => {
-  // Validaciones iniciales
   invalidTitle.value = !titulo.value.trim();
   invalidCategory.value = categoriasSeleccionadas.value.length === 0;
   invalidImage.value = isDefaultImage.value;
@@ -223,16 +221,13 @@ const handleSubmit = async () => {
   formData.append('titulo', titulo.value);
   formData.append('descripcion', descripcion.value);
   
-  // PocketBase requiere los JSON como strings
   formData.append('ingredientes', JSON.stringify(ingredientes.value));
   formData.append('pasos', JSON.stringify(pasos.value));
 
-  // Solo añadir imagen si hay un archivo nuevo
   if (imagenFile.value) {
     formData.append('imagen', imagenFile.value);
   }
 
-  // Para multi-select en PocketBase se añaden uno a uno
   categoriasSeleccionadas.value.forEach(cat => {
     formData.append('categoria', cat);
   });
@@ -246,7 +241,6 @@ const handleSubmit = async () => {
       alert('¡Receta creada con éxito!');
     }
     
-    // Quitar foco para evitar errores de aria-hidden
     if (document.activeElement instanceof HTMLElement) {
         document.activeElement.blur();
     }
@@ -254,10 +248,8 @@ const handleSubmit = async () => {
   } catch (e: any) {
     console.error("ERROR DETALLADO DE POCKETBASE:", e);
     
-    // Capturador de errores
     const serverErrors = e.response?.data || e.data || {};
     
-    // Construimos un mensaje legible
     let mensajeError = "Error de validación:\n";
     if (serverErrors.titulo) mensajeError += "- El título tiene errores.\n";
     if (serverErrors.categoria) mensajeError += "- La categoría seleccionada no es válida en la base de datos.\n";

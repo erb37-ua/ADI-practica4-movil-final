@@ -5,9 +5,10 @@ import { useMainStore } from '@/stores/main'
 import { 
   IonPage, IonContent, IonHeader, IonToolbar, IonTitle, 
   IonButtons, IonBackButton, IonCard, IonCardContent, 
-  IonInput, IonButton, IonLabel, IonIcon, IonFooter 
+  IonInput, IonButton, IonLabel, IonIcon
 } from '@ionic/vue'
 import { mailOutline, lockClosedOutline, personOutline, personAddOutline } from 'ionicons/icons'
+
 
 const router = useRouter()
 const store = useMainStore()
@@ -133,12 +134,6 @@ const handleRegister = async () => {
         </ion-card>
       </div>
     </ion-content>
-
-    <ion-footer>
-      <ion-toolbar>
-        <ion-title size="small">© 2025 Recetarizada</ion-title>
-      </ion-toolbar>
-    </ion-footer>
   </ion-page>
 </template>
 

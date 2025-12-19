@@ -14,7 +14,6 @@
             <ion-card-content>
             <ion-grid>
                 <ion-row class="cookies-row">
-                <!-- Texto -->
                 <ion-col size="12" size-md="7">
                     <h1 class="cookies-title">Política de Cookies</h1>
 
@@ -83,8 +82,6 @@ import {
 
 <style scoped>
 
-
-    /*Margen inferior*/
     .cookies-list{
         margin: 6px 0 12px 0;
     }
@@ -145,6 +142,4 @@ import {
     position: relative;
     font-weight: normal !important; 
 }
-
-
 </style>

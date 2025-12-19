@@ -33,6 +33,7 @@ ion-card.green-card {
 ion-content{
     --background: var(--bg);
     --padding-top: 32px;
+    --padding-bottom: 80px !important;
 }
 
 /* Toolbar */
@@ -51,17 +52,17 @@ ion-card-title{
 }
 /* Listas: que no pinten fondo oscuro por defecto */
 ion-list{
-  --background: transparent;
+    --background: transparent;
 }
 
 ion-item{
-  --background: transparent;
-  --ion-item-background: transparent;
+    --background: transparent;
+    --ion-item-background: transparent;
 }
 
 /* A veces el fondo lo pinta el "native" */
 ion-item::part(native){
-  background: transparent;
+    background: transparent;
 }
 
 

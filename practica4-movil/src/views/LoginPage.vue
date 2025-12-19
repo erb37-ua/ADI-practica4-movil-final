@@ -5,7 +5,7 @@ import { useMainStore } from '@/stores/main'
 import { 
   IonPage, IonContent, IonHeader, IonToolbar, IonTitle, 
   IonButtons, IonBackButton, IonCard, IonCardContent, 
-  IonInput, IonButton, IonLabel, IonIcon, IonFooter 
+  IonInput, IonButton, IonLabel, IonIcon
 } from '@ionic/vue'
 import { mailOutline, lockClosedOutline, logInOutline } from 'ionicons/icons'
 
@@ -18,7 +18,6 @@ const password = ref('')
 const errorMsg = ref('')
 const cargando = computed(() => store.authLoading)
 
-// Estado visual para errores y animación
 const shakeLogin = ref(false)
 const emailError = ref(false)
 const passwordError = ref(false)
@@ -130,12 +129,6 @@ const handleSubmit = async () => {
         </ion-card>
       </div>
     </ion-content>
-
-    <ion-footer>
-      <ion-toolbar>
-        <ion-title size="small">© 2025 Recetarizada</ion-title>
-      </ion-toolbar>
-    </ion-footer>
   </ion-page>
 </template>
 
@@ -151,7 +144,6 @@ const handleSubmit = async () => {
   max-width: 450px;
   width: 100%;
   margin: 0 auto;
-  /* El borde y fondo blanco vienen de .green-card en variables.css */
 }
 
 .login-card__title {
@@ -159,7 +151,7 @@ const handleSubmit = async () => {
   margin-bottom: 28px;
   font-weight: bold;
   text-align: center;
-  color: #000; /* Asegura título negro */
+  color: #000; 
 }
 
 .input-group {
@@ -172,10 +164,9 @@ const handleSubmit = async () => {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 8px;
-  color: #333; /* Etiqueta en gris oscuro/negro */
+  color: #333; 
 }
 
-/* CONTENEDOR DEL INPUT */
 .input-field {
   display: flex;
   align-items: center;
@@ -186,7 +177,6 @@ const handleSubmit = async () => {
   transition: all 0.2s ease-in-out;
 }
 
-/* EFECTO BORDE NEGRO AL ESCRIBIR */
 .input-field:focus-within {
   border: 2px solid #000 !important;
 }
@@ -201,20 +191,17 @@ const handleSubmit = async () => {
   color: #000;
 }
 
-/* INPUT Y CURSOR | */
 .login-card__input {
   --padding-start: 0;
   font-family: 'Itim', sans-serif;
-  color: #000; /* Texto escrito en negro */
-  caret-color: #000 !important; /* Barrita en negro */
+  color: #000; 
+  caret-color: #000 !important;
 }
 
-/* Asegurar barrita en navegadores */
 .login-card__input::part(native) {
   caret-color: #000 !important;
 }
 
-/* ERRORES */
 .input-group--error .input-field {
   border-color: #e63946 !important;
   box-shadow: 0 0 0 2px rgba(230, 57, 70, 0.15);
@@ -227,7 +214,6 @@ const handleSubmit = async () => {
   text-align: left;
 }
 
-/* BOTÓN */
 .login-card__button {
   --background: var(--dark);
   --color: #fff;
@@ -248,7 +234,6 @@ const handleSubmit = async () => {
   margin-top: 15px;
 }
 
-/* ANIMACIONES */
 @keyframes login-shake {
   0% { transform: translateX(0); }
   20% { transform: translateX(-6px); }

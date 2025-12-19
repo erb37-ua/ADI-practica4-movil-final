@@ -40,12 +40,6 @@
             </ion-card-content>
         </ion-card>
         </ion-content>
-
-        <ion-footer>
-        <ion-toolbar>
-            <ion-title size="small">© 2025 Recetarizada</ion-title>
-        </ion-toolbar>
-        </ion-footer>
     </ion-page>
 </template>
 
@@ -54,7 +48,6 @@
     IonPage, IonHeader, IonToolbar, IonTitle, IonContent,
     IonButtons, IonButton, IonIcon, IonBackButton,
     IonCard, IonCardHeader, IonCardTitle, IonCardContent,
-    IonFooter
     } from '@ionic/vue';
     import '../theme/about.css'; 
 

@@ -1,19 +1,9 @@
 <script setup lang="ts">
-/* 1. IMPORTACIÓN OBLIGATORIA DE COMPONENTES */
-import { 
-  IonPage, 
-  IonHeader, 
-  IonToolbar, 
-  IonTitle, 
-  IonContent, 
-  IonButtons, 
-  IonBackButton, 
-  IonCard, 
-  IonCardHeader,
-  IonCardTitle,
-  IonCardContent,
-  IonFooter 
-} from '@ionic/vue';
+  import { 
+    IonPage, IonHeader, IonToolbar, IonTitle, IonContent, 
+    IonButtons, IonBackButton, IonCard, IonCardHeader,
+    IonCardTitle,IonCardContent,IonFooter 
+  } from '@ionic/vue';
 </script>
 <template>
   <ion-page>
@@ -44,8 +34,8 @@ import {
             <p>
               📧
               <a class="contact__email-link"
-                 href="https://mail.google.com/mail/?view=cm&fs=1&to=erb37@gcloud.ua.es"
-                 target="_blank" rel="noopener noreferrer">
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=erb37@gcloud.ua.es"
+                target="_blank" rel="noopener noreferrer">
                 erb37@gcloud.ua.es
               </a>
             </p>
@@ -74,12 +64,6 @@ import {
         </ion-card>
       </div>
     </ion-content>
-
-    <ion-footer>
-      <ion-toolbar>
-        <ion-title size="small">© 2025 Recetarizada</ion-title>
-      </ion-toolbar>
-    </ion-footer>
   </ion-page>
 </template>
 

@@ -4,9 +4,8 @@ import { useRouter } from 'vue-router'
 import { useMainStore } from '@/stores/main'
 import { 
   IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButtons, 
-  IonBackButton, IonCard, IonCardHeader, IonCardTitle, IonCardContent,
-  IonList, IonItem, IonThumbnail, IonLabel, IonText, IonButton, 
-  IonIcon, IonTextarea, alertController, IonFooter
+  IonBackButton, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonThumbnail, IonButton, 
+  IonIcon, IonTextarea, alertController
 } from '@ionic/vue'
 import { 
   star, starOutline, createOutline, trashOutline, 
@@ -216,12 +215,6 @@ const formatDate = (iso) => {
         </ion-card>
       </div>
     </ion-content>
-
-    <ion-footer>
-      <ion-toolbar>
-        <ion-title size="small" class="ion-text-center">© 2025 Recetarizada</ion-title>
-      </ion-toolbar>
-    </ion-footer>
   </ion-page>
 </template>
 
@@ -234,10 +227,9 @@ const formatDate = (iso) => {
   padding: 40px 20px;
 }
 
-/*Icono */
 .empty-state-icon {
-  font-size: 60px; /* Tamaño */
-  margin-bottom: 24px; /* Separacion */
+  font-size: 60px; 
+  margin-bottom: 24px; 
   color: var(--dark);
 }
 
@@ -309,7 +301,6 @@ ion-thumbnail {
   margin-top: -10px;
 }
 
-/* Edición */
 .edit-mode {
   display: flex;
   flex-direction: column;
@@ -335,7 +326,6 @@ ion-thumbnail {
   gap: 8px;
 }
 
-/* Paginación */
 .pagination-footer {
   display: flex;
   justify-content: center;

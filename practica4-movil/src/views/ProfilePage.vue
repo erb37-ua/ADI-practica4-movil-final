@@ -121,7 +121,6 @@ import { personOutline, mailOutline, lockClosedOutline } from 'ionicons/icons'
     const router = useRouter()
     const store = useMainStore()
 
-    // Estados del formulario idénticos al original
     const nombre = ref('')
     const correo = ref('')
     const passOld = ref('')
@@ -135,7 +134,6 @@ import { personOutline, mailOutline, lockClosedOutline } from 'ionicons/icons'
 
     const cargando = computed(() => store.authLoading)
 
-    // Efecto Shake (Misma lógica de setTimeout y nextTick)
     const triggerShake = async () => {
     shakeForm.value = false
     await nextTick()
@@ -143,7 +141,6 @@ import { personOutline, mailOutline, lockClosedOutline } from 'ionicons/icons'
     setTimeout(() => { shakeForm.value = false }, 400)
     }
 
-    // Carga de datos (Sync con el Store)
     const loadUserData = () => {
     if (!store.isLogged) {
         router.push('/login')
@@ -157,9 +154,7 @@ import { personOutline, mailOutline, lockClosedOutline } from 'ionicons/icons'
     onMounted(loadUserData)
     onIonViewWillEnter(loadUserData)
 
-    // Guardar Cambios (Funcionalidad idéntica)
     const handleSave = async () => {
-    // 1. Validación de coincidencia
     if (pass.value && pass.value !== pass2.value) {
         errorMsg.value = 'Las contraseñas no coinciden.'
         infoMsg.value = ''
@@ -188,7 +183,6 @@ import { personOutline, mailOutline, lockClosedOutline } from 'ionicons/icons'
         errorMsg.value = error.message || 'No se pudo actualizar el perfil.'
 
         const msg = errorMsg.value.toLowerCase()
-        // Identificación de error en password actual (Misma lógica original)
         if (msg.includes('contraseña actual') || msg.includes('current password')) {
         currentPassError.value = true
         }
@@ -201,7 +195,6 @@ import { personOutline, mailOutline, lockClosedOutline } from 'ionicons/icons'
     router.push('/login')
     }
 
-    // Eliminar cuenta (Migrado de confirm() a Alert de Ionic)
     const confirmDelete = async () => {
     const alert = await alertController.create({
         header: '¿Eliminar cuenta?',
@@ -299,7 +292,6 @@ import { personOutline, mailOutline, lockClosedOutline } from 'ionicons/icons'
     font-weight: bold;
 }
 
-/* Manejo de errores visuales igual al original */
 .error-border .custom-input-box {
     border-color: #e63946;
     box-shadow: 0 0 0 2px rgba(230, 57, 70, 0.15);
