@@ -4,11 +4,29 @@
     --bg:#fbf8f6;
     --card:#fff;
     --radius:14px;
-
     --app-font: 'Itim', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-
-    /* CLAVE: esto es lo que Ionic usa */
     --ion-font-family: var(--app-font);
+}
+
+ion-card {
+    --background: transparent !important;
+    --box-shadow: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0;
+    text-align: justify;
+    --color: #000000 !important;
+    color: #000000 !important;
+}
+
+/* Si quieres que alguna tarjeta SÍ tenga fondo blanco (como la del Login) 
+   simplemente le añadimos una clase específica en el .vue */
+ion-card.green-card {
+    --background: #ffffff !important;
+    border: 2px solid var(--dark) !important;
+    --border-radius: var(--radius);
+    margin: 10px; 
+    border-radius: 20px;
 }
 
 /* Fondo general de la app */
@@ -21,13 +39,6 @@ ion-content{
 ion-toolbar{
     --background: #D2694C;
     --color: #000000;
-}
-
-/* Tarjetas */
-ion-card{
-    --background: var(--card);
-    border-radius: var(--radius);
-    --color: #000;
 }
 
 /* No hace falta listar ion-title, ion-label... */
