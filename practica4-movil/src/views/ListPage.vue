@@ -31,11 +31,11 @@
 
         <ion-list class="custom-list" lines="none">
           <ion-item v-for="recipe in paginatedRecipes" :key="recipe.id" class="recipe-admin-card">
-            <ion-thumbnail slot="start">
+            <ion-thumbnail slot="start" @click="irAlDetalle(recipe.id)" style="cursor: pointer;">
               <img :src="recipe.image || '/placeholder.jpg'" class="recipe-admin-thumb" />
             </ion-thumbnail>
             
-            <ion-label>
+            <ion-label @click="irAlDetalle(recipe.id)" style="cursor: pointer;">
               <h2 class="recipe-admin-title">{{ recipe.title }}</h2>
             </ion-label>
 
@@ -79,7 +79,7 @@ import { useMainStore } from '@/stores/main'
 import { 
   IonPage, IonContent, IonList, IonItem, IonLabel, IonThumbnail, 
   IonButton, IonIcon, IonButtons, IonSearchbar, IonSelect, 
-  IonSelectOption
+  IonSelectOption, IonSpinner, alertController
 } from '@ionic/vue'
 import { 
   createOutline, trashOutline, chevronBackOutline, 
@@ -125,13 +125,42 @@ const handleSearch = () => { currentPage.value = 1 }
 const setPage = (page: number) => { if (page >= 1 && page <= totalPages.value) currentPage.value = page }
 
 const handleDelete = async (id: string) => {
-  if (!confirm('¿Eliminar esta receta?')) return
-  try {
-    await store.deleteRecipe(id)
-    if (currentPage.value > totalPages.value) currentPage.value = totalPages.value
-  } catch (error) {
-    alert('No se pudo eliminar.')
-  }
+  const alert = await alertController.create({
+    header: '¿Eliminar receta?',
+    message: 'Esta acción no se puede deshacer.',
+    cssClass: 'custom-alert',
+    buttons: [
+      {
+        text: 'CANCELAR',
+        role: 'cancel',
+        cssClass: 'alert-button-cancel',
+        handler: () => {
+          console.log('Borrado cancelado');
+        }
+      },
+      {
+        text: 'ELIMINAR',
+        role: 'destructive',
+        handler: async () => {
+          try {
+            await store.deleteRecipe(id);
+            if (currentPage.value > totalPages.value) {
+              currentPage.value = totalPages.value;
+            }
+          } catch (error) {
+            console.error('No se pudo eliminar la receta');
+          }
+        }
+      }
+    ]
+  });
+
+  await alert.present();
 }
+
+const irAlDetalle = (id: string) => {
+  router.push({ name: 'RecipeDetail', params: { id } });
+}
+
 const handleEdit = (id: string) => { router.push(`/create-edit/${id}`) }
 </script>

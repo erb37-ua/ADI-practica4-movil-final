@@ -118,9 +118,9 @@ import { ref, onMounted, computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useMainStore } from '@/stores/main'
 import { 
-  IonPage, IonContent, IonHeader, IonToolbar, IonTitle, IonList, IonItem, 
-  IonLabel, IonInput, IonTextarea, IonSelect, IonSelectOption, IonButton, 
-  IonIcon, IonChip, IonListHeader, IonBadge, IonSpinner, IonFab, IonFabButton
+  IonPage, IonContent, IonList, IonItem, IonLabel, 
+  IonInput, IonTextarea, IonSelect, IonSelectOption, IonButton, 
+  IonIcon, IonChip, IonBadge, IonFab, IonFabButton, alertController
 } from '@ionic/vue'
 import { 
   cameraOutline, closeCircle, addOutline, trashOutline, 
@@ -213,14 +213,20 @@ const handleSubmit = async () => {
   if (invalidTitle.value || invalidCategory.value || invalidImage.value) {
     isShaking.value = true;
     setTimeout(() => isShaking.value = false, 500);
-    alert('Por favor, completa los campos obligatorios (Título, Imagen y al menos una Categoría).');
+
+    const alertError = await alertController.create({
+      header: 'Atención',
+      message: 'Faltan campos obligatorios: Imagen, Título, 1 Categoría',
+      cssClass: 'custom-alert',
+      buttons: ['OK']
+    });
+    await alertError.present();
     return;
   }
 
   const formData = new FormData();
   formData.append('titulo', titulo.value);
   formData.append('descripcion', descripcion.value);
-  
   formData.append('ingredientes', JSON.stringify(ingredientes.value));
   formData.append('pasos', JSON.stringify(pasos.value));
 
@@ -235,27 +241,39 @@ const handleSubmit = async () => {
   try {
     if (isEditMode.value) {
       await store.updateRecipe(recipeId, formData);
-      alert('¡Receta actualizada con éxito!');
     } else {
       await store.createRecipe(formData);
-      alert('¡Receta creada con éxito!');
     }
-    
+
+    const alertSuccess = await alertController.create({
+      header: '¡Hecho!',
+      message: isEditMode.value ? '¡Receta actualizada con éxito!' : 'Receta creada con éxito',
+      cssClass: 'custom-alert',
+      buttons: [
+        {
+          text: 'ACEPTAR',
+          handler: () => {
+            router.push('/list');
+          }
+        }
+      ]
+    });
+    await alertSuccess.present();
+
     if (document.activeElement instanceof HTMLElement) {
         document.activeElement.blur();
     }
-    router.push('/list');
   } catch (e: any) {
-    console.error("ERROR DETALLADO DE POCKETBASE:", e);
+    console.error("ERROR DETALLADO:", e);
     
     const serverErrors = e.response?.data || e.data || {};
-    
-    let mensajeError = "Error de validación:\n";
-    if (serverErrors.titulo) mensajeError += "- El título tiene errores.\n";
-    if (serverErrors.categoria) mensajeError += "- La categoría seleccionada no es válida en la base de datos.\n";
-    if (serverErrors.imagen) mensajeError += "- La imagen es obligatoria o el formato no es válido.\n";
-
-    alert(mensajeError + "\nDetalle técnico: " + JSON.stringify(serverErrors));
+    const alertTechError = await alertController.create({
+      header: 'Error del servidor',
+      message: 'Hubo un problema al guardar la receta. Revisa los datos.',
+      cssClass: 'custom-alert',
+      buttons: ['OK']
+    });
+    await alertTechError.present();
   }
 }
 </script>

@@ -151,7 +151,7 @@ const handleSubmit = async () => {
   margin-bottom: 28px;
   font-weight: bold;
   text-align: center;
-  color: #000; 
+  color: #000;
 }
 
 .input-group {
@@ -194,7 +194,7 @@ const handleSubmit = async () => {
 .login-card__input {
   --padding-start: 0;
   font-family: 'Itim', sans-serif;
-  color: #000; 
+  color: #000;
   caret-color: #000 !important;
 }
 
