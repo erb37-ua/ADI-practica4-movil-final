@@ -8,26 +8,45 @@
     color: #666;
 }
 
-/* Grid adaptado para móviles */
+/* Grid adaptado para móviles: 1 receta por fila */
 .recetas-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 20px;
     padding: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Tarjeta estilo Ionic */
+/* Formato Tablet: 2 recetas por fila */
+@media (min-width: 768px) {
+    .recetas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Formato Portátil/PC: 3 recetas por fila */
+@media (min-width: 1024px) {
+    .recetas-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 .receta-card {
     border: 1px solid #e0e0e0;
     border-radius: 12px;
     overflow: hidden;
     background: white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .receta-image {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    cursor: pointer;
 }
 
 .receta-info {
@@ -42,15 +61,21 @@
     font-size: 1.1rem;
     font-weight: bold;
     color: #000000;
+    cursor: pointer;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .receta-footer {
     padding: 0 12px 12px;
+    margin-top: auto;
     color: #888;
     font-size: 0.9rem;
 }
 
-/* Corazón de Like */
 .heart-icon {
     font-size: 24px;
     color: #ccc;
@@ -61,7 +86,6 @@
     color: #e63946;
 }
 
-/* Botón flotante para añadir */
 .fab-button {
     margin-bottom: 20px;
 }

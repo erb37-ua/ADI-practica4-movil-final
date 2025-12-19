@@ -6,7 +6,7 @@
       </ion-toolbar>
     </ion-header>
 
-    <ion-content :fullscreen="true">
+    <ion-content>
       <div v-if="store.homeLoading" class="message-container">
         <ion-spinner name="crescent"></ion-spinner>
         <p>Cargando recetas...</p>

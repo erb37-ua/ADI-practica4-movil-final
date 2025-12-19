@@ -1,4 +1,4 @@
-/* --- CONTENEDOR PRINCIPAL --- */
+/* === CONTENEDOR PRINCIPAL === */
 .recipe-detail-container {
     padding: 16px;
     background: transparent;
@@ -19,7 +19,7 @@
     margin-bottom: 20px;
 }
 
-/* --- TEXTOS Y SECCIONES PLANAS --- */
+/* === TEXTOS Y SECCIONES PLANAS === */
 .recipe-detail__description {
     line-height: 1.6;
     font-size: 1.1rem;
@@ -46,7 +46,7 @@
     border: none !important;
 }
 
-/* --- INGREDIENTES (RECUPERANDO COLORES) --- */
+/* === INGREDIENTES (RECUPERANDO COLORES) === */
 .recipe-detail__list-items {
     list-style: none;
     padding: 0;
@@ -60,9 +60,8 @@
     font-size: 1.1rem;
 }
 
-/* Esta es la clase que da color a los números de los ingredientes */
 .amount {
-    color: #d2694c; /* El color rojo/naranja de tu marca */
+    color: #d2694c;
     font-weight: bold;
     margin-right: 8px;
     font-size: 1.2rem;
@@ -76,14 +75,14 @@
     font-size: 1.2rem;
 }
 
-/* --- PASOS --- */
+/* === PASOS === */
 .step-item {
     margin-bottom: 16px;
     color: #000000 !important;
     line-height: 1.6;
 }
 
-/* --- ESTRELLAS Y FORMULARIO --- */
+/* === ESTRELLAS Y FORMULARIO === */
 .stars-row {
     display: flex;
     gap: 10px;
@@ -121,33 +120,33 @@ ion-textarea {
     font-weight: bold;
 }
 
-/* --- TARJETAS COMENTARIOS (CORREGIDO) --- */
+/* === TARJETAS COMENTARIOS === */
 .recipe-comments__item {
     background: #ffffff !important;
     padding: 15px;
     border-radius: 12px;
     margin-bottom: 15px;
     border: 1px solid #eee;
-    color: #000000 !important; /* Fuerza el color de la tarjeta */
+    color: #000000 !important;
 }
 
 .recipe-comments__author {
     font-weight: bold;
-    color: #000000 !important; /* Nombre del autor en negro */
+    color: #000000 !important;
     margin-bottom: 4px;
 }
 
 .recipe-comments__meta {
     font-size: 0.8rem;
-    color: #666666 !important; /* Fecha en gris oscuro para que sea legible */
+    color: #666666 !important;
 }
 
 .comment-text {
-    color: #000000 !important; /* Texto del comentario en negro */
+    color: #000000 !important;
     line-height: 1.4;
 }
 
 .recipe-comments__stars {
-    color: #ffc107 !important; /* Asegura el amarillo de las estrellas fijas */
+    color: #ffc107 !important;
     margin: 4px 0;
 }

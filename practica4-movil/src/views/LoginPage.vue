@@ -151,7 +151,6 @@ const handleSubmit = async () => {
   max-width: 450px;
   width: 100%;
   margin: 0 auto;
-  /* El borde y fondo blanco vienen de .green-card en variables.css */
 }
 
 .login-card__title {
@@ -159,7 +158,7 @@ const handleSubmit = async () => {
   margin-bottom: 28px;
   font-weight: bold;
   text-align: center;
-  color: #000; /* Asegura título negro */
+  color: #000;
 }
 
 .input-group {
@@ -172,10 +171,9 @@ const handleSubmit = async () => {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 8px;
-  color: #333; /* Etiqueta en gris oscuro/negro */
+  color: #333;
 }
 
-/* CONTENEDOR DEL INPUT */
 .input-field {
   display: flex;
   align-items: center;
@@ -186,7 +184,6 @@ const handleSubmit = async () => {
   transition: all 0.2s ease-in-out;
 }
 
-/* EFECTO BORDE NEGRO AL ESCRIBIR */
 .input-field:focus-within {
   border: 2px solid #000 !important;
 }
@@ -201,20 +198,18 @@ const handleSubmit = async () => {
   color: #000;
 }
 
-/* INPUT Y CURSOR | */
 .login-card__input {
   --padding-start: 0;
   font-family: 'Itim', sans-serif;
-  color: #000; /* Texto escrito en negro */
-  caret-color: #000 !important; /* Barrita en negro */
+  color: #000;
+  caret-color: #000 !important;
 }
 
-/* Asegurar barrita en navegadores */
 .login-card__input::part(native) {
   caret-color: #000 !important;
 }
 
-/* ERRORES */
+/* === ERRORES === */
 .input-group--error .input-field {
   border-color: #e63946 !important;
   box-shadow: 0 0 0 2px rgba(230, 57, 70, 0.15);

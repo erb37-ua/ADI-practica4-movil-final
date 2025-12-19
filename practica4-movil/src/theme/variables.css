@@ -19,8 +19,6 @@ ion-card {
     color: #000000 !important;
 }
 
-/* Si quieres que alguna tarjeta SÍ tenga fondo blanco (como la del Login) 
-   simplemente le añadimos una clase específica en el .vue */
 ion-card.green-card {
     --background: #ffffff !important;
     border: 2px solid var(--dark) !important;
@@ -29,19 +27,16 @@ ion-card.green-card {
     border-radius: 20px;
 }
 
-/* Fondo general de la app */
 ion-content{
     --background: var(--bg);
     --padding-top: 32px;
 }
 
-/* Toolbar */
 ion-toolbar{
     --background: #D2694C;
     --color: #000000;
 }
 
-/* No hace falta listar ion-title, ion-label... */
 html, body, ion-app{
     font-family: var(--app-font);
 }
@@ -49,7 +44,7 @@ html, body, ion-app{
 ion-card-title{
     color: #000;
 }
-/* Listas: que no pinten fondo oscuro por defecto */
+
 ion-list{
   --background: transparent;
 }
@@ -59,18 +54,14 @@ ion-item{
   --ion-item-background: transparent;
 }
 
-/* A veces el fondo lo pinta el "native" */
 ion-item::part(native){
   background: transparent;
 }
 
-
-/* Contenedor del Popup */
 .custom-alert {
     --background: #fbf8f6; 
     --backdrop-opacity: 0.6;
 }
-
 
 .custom-alert .alert-title {
     font-family: 'Itim', sans-serif !important;
@@ -79,20 +70,17 @@ ion-item::part(native){
     font-weight: bold !important;
 }
 
-
 .custom-alert .alert-message {
     font-family: 'Itim', sans-serif !important;
     color: #444 !important;
     font-size: 16px !important;
 }
 
-
 .custom-alert .alert-button-inner {
     font-family: 'Itim', sans-serif !important;
     font-weight: bold !important;
     text-transform: uppercase !important;
 }
-
 
 .custom-alert .alert-button-role-destructive .alert-button-inner {
     color: #e63946 !important;
@@ -110,7 +98,6 @@ body, html, ion-app, ion-content, ion-page {
     --ion-text-color: #000000 !important;
 }
 
-/* Anula el modo oscuro forzado del sistema */
 @media (prefers-color-scheme: dark) {
   body {
     --ion-background-color: #fbf8f6 !important;

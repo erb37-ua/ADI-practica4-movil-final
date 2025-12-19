@@ -1,4 +1,4 @@
-/* CONTENEDOR Y TÍTULO PRINCIPAL */
+/* === CONTENEDOR Y TÍTULO PRINCIPAL === */
 .create-edit-container {
     padding: 16px;
     padding-bottom: 60px;
@@ -13,7 +13,7 @@
     font-family: 'Itim', sans-serif;
 }
 
-/* SECCIÓN DE IMAGEN Y BOTÓN ROJO */
+/* === SECCIÓN DE IMAGEN Y BOTÓN ROJO === */
 .image-upload-wrapper {
     display: flex;
     flex-direction: column;
@@ -46,7 +46,7 @@
     min-width: 180px;
 }
 
-/* CONFIGURACIÓN GLOBAL DE INPUTS E ITEMS */
+/* === CONFIGURACIÓN GLOBAL DE INPUTS E ITEMS === */
 ion-list {
     --ion-item-border-color: transparent !important;
     background: transparent !important;
@@ -74,7 +74,7 @@ ion-label {
     font-weight: bold !important;
 }
 
-/* CATEGORÍAS */
+/* === CATEGORÍAS === */
 .category-tag {
     --background: #ffd966 !important;
     --color: #000000 !important;
@@ -82,7 +82,7 @@ ion-label {
     margin-bottom: 10px;
 }
 
-/* SECCIONES DINÁMICAS (INGREDIENTES Y PASOS) */
+/* === SECCIONES DINÁMICAS (INGREDIENTES Y PASOS) === */
 .section-subtitle {
     color: #000;
     font-size: 1.2rem;
@@ -129,7 +129,7 @@ ion-label {
     border-right: 1px solid #eee;
 }
 
-/* BOTONES DE ACCIÓN (+ AÑADIR) */
+/* === BOTONES DE ACCIÓN (+ AÑADIR) === */
 .section-container ion-button.ion-margin-top {
     --color: #000000 !important;
     --border-color: #000000 !important;
@@ -147,13 +147,13 @@ ion-label {
     opacity: 1 !important;
 }
 
-/* ICONOS DE ELIMINAR */
+/* === ICONOS DE ELIMINAR === */
 ion-button[color="danger"] ion-icon {
     --color: #e63946 !important;
     color: #e63946 !important;
 }
 
-/* BOTONES */
+/* === BOTONES ===*/
 .form-footer {
     display: flex;
     gap: 16px;
