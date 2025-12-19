@@ -105,3 +105,15 @@ ion-item::part(native){
 .custom-alert .alert-button-group {
     padding: 8px !important;
 }
+body, html, ion-app, ion-content, ion-page {
+    --ion-background-color: #fbf8f6 !important;
+    --ion-text-color: #000000 !important;
+}
+
+/* Anula el modo oscuro forzado del sistema */
+@media (prefers-color-scheme: dark) {
+  body {
+    --ion-background-color: #fbf8f6 !important;
+    --ion-text-color: #000000 !important;
+  }
+}

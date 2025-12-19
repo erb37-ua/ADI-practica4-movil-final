@@ -12,7 +12,7 @@ import LoginPage from '@/views/LoginPage.vue';
 import RegisterPage from '@/views/RegisterPage.vue';
 import CommentsPage from '@/views/CommentsPage.vue';
 import ProfilePage from '@/views/ProfilePage.vue';
-
+import CreateEditPage from '../views/CreateEditPage.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -67,6 +67,10 @@ const routes: Array<RouteRecordRaw> = [
     path: '/profile',
     name: 'profile',
     component: ProfilePage
+  },{
+    path: '/create-edit/:id?',
+    name: 'CreateEdit',
+    component: CreateEditPage
   }
 ]
 

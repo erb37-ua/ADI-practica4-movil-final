@@ -135,5 +135,16 @@ import {
     --inner-padding-end: 0px;
 }
 
+.cookies-item ion-label.cookies-li {
+    font-size: 15px !important; 
+    line-height: 1.5;
+    color: #000;
+    margin: 0;
+    white-space: normal;
+    padding-left: 20px;
+    position: relative;
+    font-weight: normal !important; 
+}
+
 
 </style>
