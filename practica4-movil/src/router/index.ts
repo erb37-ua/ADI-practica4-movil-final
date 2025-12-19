@@ -5,6 +5,7 @@ import AboutPage from '@/views/AboutPage.vue';
 import CookiesView from '@/views/legal/CookiesView.vue';
 import RecipeDetailPage from '../views/RecipeDetailPage.vue';
 import ListPage from '../views/ListPage.vue';
+import CreateEditPage from '../views/CreateEditPage.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -31,6 +32,10 @@ const routes: Array<RouteRecordRaw> = [
     path: '/list',
     name: 'List',
     component: ListPage
+  },{
+    path: '/create-edit/:id?',
+    name: 'CreateEdit',
+    component: CreateEditPage
   }
 ]
 

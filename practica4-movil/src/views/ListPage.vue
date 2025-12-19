@@ -4,33 +4,33 @@
       <div class="list-container">
         
         <div class="list-header-controls">
-            <ion-item lines="none" class="filter-select-item">
-                <ion-select 
-                    :value="filterCategory" 
-                    @ionChange="changeFilter($event)" 
-                    interface="popover" 
-                    toggle-icon="chevron-down"
-                    placeholder="Todo"
-                >
-                <ion-select-option value="">Todo</ion-select-option>
-                <ion-select-option value="Desayuno">Desayuno</ion-select-option>
-                <ion-select-option value="Comida">Comida</ion-select-option>
-                <ion-select-option value="Cena">Cena</ion-select-option>
-                <ion-select-option value="Salado">Salado</ion-select-option>
-                <ion-select-option value="Dulce">Dulce</ion-select-option>
-                </ion-select>
-            </ion-item>
+          <ion-item lines="none" class="filter-select-item">
+            <ion-select 
+              :value="filterCategory" 
+              @ionChange="changeFilter($event)" 
+              interface="popover" 
+              toggle-icon="chevron-down"
+              placeholder="Todo"
+            >
+              <ion-select-option value="">Todo</ion-select-option>
+              <ion-select-option value="Desayuno">Desayuno</ion-select-option>
+              <ion-select-option value="Comida">Comida</ion-select-option>
+              <ion-select-option value="Cena">Cena</ion-select-option>
+              <ion-select-option value="Salado">Salado</ion-select-option>
+              <ion-select-option value="Dulce">Dulce</ion-select-option>
+            </ion-select>
+          </ion-item>
 
-            <ion-searchbar 
-                class="list-search-bar" 
-                placeholder="Buscar" 
-                v-model="searchQuery"
-                @ionInput="handleSearch"
-            ></ion-searchbar>
+          <ion-searchbar 
+            class="list-search-bar" 
+            placeholder="Buscar" 
+            v-model="searchQuery"
+            @ionInput="handleSearch"
+          ></ion-searchbar>
         </div>
 
-        <ion-list class="custom-list">
-          <ion-item v-for="recipe in paginatedRecipes" :key="recipe.id" class="recipe-admin-card" lines="none">
+        <ion-list class="custom-list" lines="none">
+          <ion-item v-for="recipe in paginatedRecipes" :key="recipe.id" class="recipe-admin-card">
             <ion-thumbnail slot="start">
               <img :src="recipe.image || '/placeholder.jpg'" class="recipe-admin-thumb" />
             </ion-thumbnail>
@@ -54,7 +54,9 @@
           <ion-button fill="clear" :disabled="currentPage === 1" @click="setPage(currentPage - 1)">
             <ion-icon :icon="chevronBackOutline" class="pagination-icon"></ion-icon>
           </ion-button>
+          
           <span class="page-number">{{ currentPage }} / {{ totalPages }}</span>
+          
           <ion-button fill="clear" :disabled="currentPage === totalPages" @click="setPage(currentPage + 1)">
             <ion-icon :icon="chevronForwardOutline" class="pagination-icon"></ion-icon>
           </ion-button>
@@ -66,6 +68,7 @@
           <ion-icon :icon="addOutline"></ion-icon>
         </ion-fab-button>
       </ion-fab>
+
     </ion-content>
   </ion-page>
 </template>
