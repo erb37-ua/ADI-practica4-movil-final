@@ -56,10 +56,9 @@
     IonCard, IonCardHeader, IonCardTitle, IonCardContent,
     IonFooter
     } from '@ionic/vue';
+    import '../theme/about.css'; 
 
     import { personCircleOutline } from 'ionicons/icons';
 
     import yoImg from '/yo.jpeg';
 </script>
-
-<style scoped src="./about.css"></style>

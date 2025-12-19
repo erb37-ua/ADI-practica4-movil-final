@@ -59,10 +59,10 @@
                     </p>
                 </ion-col>
 
-                <!-- Imagen -->
-                <ion-col size="12" size-md="5" class="img-col">
-                    <img src="/cookies.png" alt="Cookies" class="cookies-img" />
-                </ion-col>
+                <div class="about-image">
+                    <img src="/cookies.png" alt="Aviso Legal" />
+                </div>
+
                 </ion-row>
             </ion-grid>
             </ion-card-content>
@@ -73,49 +73,20 @@
 
 <script setup lang="ts">
 import {
-  IonPage, IonHeader, IonToolbar, IonTitle, IonContent,
-  IonButtons, IonBackButton,
-  IonCard, IonCardContent,
-  IonGrid, IonRow, IonCol,
-  IonList, IonItem, IonLabel
+    IonPage, IonHeader, IonToolbar, IonTitle, IonContent,
+    IonButtons, IonBackButton,
+    IonCard, IonCardContent,
+    IonGrid, IonRow, IonCol,
+    IonList, IonItem, IonLabel
 } from '@ionic/vue'
 </script>
 
 <style scoped>
-    /* Card centrada y con ancho “móvil/tablet” */
-    .cookies-card{
-        max-width: 900px;
-        margin: 12px auto;
-        text-align: justify;
-    }
 
-    /* Layout tipo “texto + imagen” en grande, apilado en móvil */
-    .cookies-row{
-        align-items: flex-start;
-        gap: 18px;
-    }
 
-    .cookies-title{
-        font-size: 28px;
-        margin: 0 0 12px 0;
-        color: #000;
-    }
-
-    /* Lista estilo texto (sin look de “lista de ajustes”) */
+    /*Margen inferior*/
     .cookies-list{
         margin: 6px 0 12px 0;
-    }
-
-    /* Imagen */
-    .img-col{
-        display: flex;
-        justify-content: center;
-    }
-
-    .cookies-img{
-        width: min(260px, 100%);
-        border-radius: 12px;
-        object-fit: cover;
     }
 
     .cookies-p {
@@ -145,12 +116,6 @@ import {
         color: #000;
     }
 
-    :deep(.cookies-item ion-label) {
-        --font-size: 15px !important;
-        font-size: 15px !important;
-    }
-
-
 
     :deep(ion-list.cookies-list),
     :deep(ion-list.cookies-list::part(native)){
@@ -170,7 +135,5 @@ import {
     --inner-padding-end: 0px;
 }
 
-:deep(ion-item.cookies-item) + :deep(ion-item.cookies-item){
-    margin-top: 8px;
-}
+
 </style>

@@ -2,9 +2,13 @@ import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
 import HomePage from '../views/HomePage.vue'
 import AboutPage from '@/views/AboutPage.vue';
-import CookiesView from '@/views/legal/CookiesView.vue';
+import CookiesView from '@/views/legal/CookiesPage.vue';
 import RecipeDetailPage from '../views/RecipeDetailPage.vue';
 import ListPage from '../views/ListPage.vue';
+import ContactPage from '@/views/ContactPage.vue';
+import PrivacidadPage from '@/views/legal/PrivacidadPage.vue';
+import LegalPage from '@/views/legal/LegalPage.vue';
+
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -31,6 +35,18 @@ const routes: Array<RouteRecordRaw> = [
     path: '/list',
     name: 'List',
     component: ListPage
+  },{
+    path: '/contact',
+    name: 'contact',
+    component: ContactPage
+  },{
+    path: '/privacidad',
+    name: 'privacidad',
+    component: PrivacidadPage
+  },{
+    path: '/legal',
+    name: 'legal',
+    component: LegalPage
   }
 ]
 
